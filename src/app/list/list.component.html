@@ -1,0 +1,20 @@
+<div class="container">
+
+	<h4>
+		your contacts
+	</h4>
+	<ng-container *ngIf="searchTerm">
+		<ng-container *ngIf="filtered.length < 1; else showFiltered">
+			No Contacts
+		</ng-container>
+
+	</ng-container>
+	<ng-container *ngIf="!searchTerm">
+		<app-contact *ngFor="let item of contacts;" [contact]="item"></app-contact>
+	</ng-container>
+</div>
+
+
+<ng-template #showFiltered>
+	<app-contact *ngFor="let item of filtered;" [contact]="item"></app-contact>
+</ng-template>
