@@ -16,9 +16,9 @@ export class ListComponent implements OnInit {
     this.getContacts();
     this.contactService.tempSearchTerm.subscribe(term => {
       this.filtered = [];
-      this.searchTerm = term;
+      this.searchTerm = term.toLowerCase();
       this.contacts.forEach(contact => {
-        this.searchContact(term, contact);
+        this.searchContact(this.searchTerm, contact);
       });
     });
   }
