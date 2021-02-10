@@ -11,6 +11,7 @@ import { SearchComponent } from "./search/search.component";
 import { MaterialModule } from "../material/material.module";
 import { HttpClientModule } from "@angular/common/http";
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
+import { AboutComponent } from './about/about.component';
 @NgModule({
   imports: [
     BrowserModule,
@@ -26,7 +27,8 @@ import { FormsModule, ReactiveFormsModule } from "@angular/forms";
     ProfileComponent,
     ListComponent,
     ContactComponent,
-    SearchComponent
+    SearchComponent,
+    AboutComponent
   ],
   bootstrap: [AppComponent],
   providers: [ContactService]

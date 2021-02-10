@@ -1,3 +1,6 @@
-# angular-ivy-srerw2
-
-[Edit on StackBlitz ⚡️](https://stackblitz.com/edit/angular-ivy-srerw2)
+Simple Angular Application that goes over Angular's key concepts:
+- Modules
+- Routing
+- Components
+- Templates, directives, and data binding
+- Services and dependency injection
