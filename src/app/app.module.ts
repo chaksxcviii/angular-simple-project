@@ -11,7 +11,10 @@ import { SearchComponent } from "./search/search.component";
 import { MaterialModule } from "../material/material.module";
 import { HttpClientModule } from "@angular/common/http";
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
-import { AboutComponent } from './about/about.component';
+import { AboutComponent } from "./about/about.component";
+import { RouterModule } from "@angular/router";
+import { AppRoutingModule, routes } from "./app.routing.module";
+import { HomeComponent } from './home/home.component';
 @NgModule({
   imports: [
     BrowserModule,
@@ -19,6 +22,7 @@ import { AboutComponent } from './about/about.component';
     MaterialModule,
     HttpClientModule,
     FormsModule,
+    RouterModule.forRoot(routes),
     ReactiveFormsModule
   ],
   declarations: [
@@ -28,7 +32,8 @@ import { AboutComponent } from './about/about.component';
     ListComponent,
     ContactComponent,
     SearchComponent,
-    AboutComponent
+    AboutComponent,
+    HomeComponent
   ],
   bootstrap: [AppComponent],
   providers: [ContactService]

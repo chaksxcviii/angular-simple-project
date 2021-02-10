@@ -1,12 +1,13 @@
-import { Routes, RouterModule, PreloadAllModules } from "@angular/router";
 import { NgModule } from "@angular/core";
+import { Routes, RouterModule, PreloadAllModules } from "@angular/router";
 import { AppComponent } from "./app.component";
 import { AboutComponent } from "./about/about.component";
+import { HomeComponent } from "./home/home.component";
 
 export const routes: Routes = [
-  { path: "/", component: AppComponent },
-  { path: "/about", component: AboutComponent },
-  { path: "**", redirectTo: "/dashboard", pathMatch: "full" }
+  { path: "", component: HomeComponent },
+  { path: "about", component: AboutComponent },
+  { path: "**", redirectTo: "", pathMatch: "full" }
 ];
 
 @NgModule({
