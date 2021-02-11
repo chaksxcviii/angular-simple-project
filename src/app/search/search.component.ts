@@ -8,9 +8,8 @@ import { ContactService } from "../contact/contact.service";
   styleUrls: ["./search.component.css"]
 })
 export class SearchComponent implements OnInit {
-  searchInput: FormControl = new FormControl(null);
+  searchInput: FormControl = new FormControl("");
   constructor(public contactService: ContactService) {}
-  value = null;
   ngOnInit() {}
 
   setSearch($event) {
